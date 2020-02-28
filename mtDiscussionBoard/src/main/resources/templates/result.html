@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>New Post</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div>
+    <p>Post:
+    <span th:text="${post.postTitle}"></span>
+    </p>
+    <br />
+    <p>Post Details:
+    <span th:text="${post.postDetails}"></span>
+    </p>
+    <br />
+    <p>Date/Time:
+    <span th:text="${post.postTimeStamp}"></span>
+    </p>
+    </div>
+
+</body>
+</html>
