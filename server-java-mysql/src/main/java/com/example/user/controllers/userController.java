@@ -1,42 +1,55 @@
 package com.example.user.controllers;
 
-public class userController {
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.user.models.User;
+import com.example.user.models.UserRepository;
+
+@RestController
+public class UserController {
 	
 	@Autowired
 	UserRepository userRepository;
 	
 	
-	@GetMapping("/chat")
-	public List<user> getUser(){	
+	@GetMapping("/user")
+	public List<User> getUsers(){	
 		return userRepository.findAll();
 }
-	@GetMapping("/chat/{id}")
+	@GetMapping("/user/{id}")
 	public User getUser(@PathVariable Integer id) {
 		User foundUser = userRepository.findById(id).orElse(null);
 		return foundUser;
 	}
 	
-	@PostMapping("/chat")
+	@PostMapping("/user")
 	public User makeUser(@RequestBody User user) {
 		userRepository.save(user);
 		return user;
 	}
 	
-	@DeleteMapping("/chat/{id}")
+	@DeleteMapping("/user/{id}")
 	public User deleteUser(@PathVariable Integer id) {
-		user foundUser = userRepository.findById(id).orElse(null); 
+		User foundUser = userRepository.findById(id).orElse(null); 
 		userRepository.delete(foundUser);
 		return foundUser;
 	}
 	
-	@PutMapping("/chat/{id}")
+	@PutMapping("/user/{id}")
 	public User updateUser(@PathVariable Integer id, @RequestBody User user) {
 		User foundUser = userRepository.findById(id).orElse(null);
 		foundUser.setName(user.getName());
-		foundUser.setContent(user.getContent());
-		userRepository.save(founduser);
+		userRepository.save(foundUser);
 		return foundUser;
 	}
-}
-
 }
