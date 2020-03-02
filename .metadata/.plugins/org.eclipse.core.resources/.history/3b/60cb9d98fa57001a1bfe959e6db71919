@@ -1,0 +1,52 @@
+package com.example.user.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.user.models.User;
+import com.example.user.models.UserRepository;
+
+@RestController
+@RequestMapping("/users")
+public class UserController {
+
+  @Autowired
+  UserRepository userRepository;
+
+  @GetMapping()
+  public List<User> getusers() {
+    return userRepository.findAll();
+  }
+
+  @PostMapping()
+  public User adduser(@RequestBody User user) {
+    return userRepository.save(user);
+  }
+
+  @DeleteMapping("/{id}")
+  public void deleteuser(@PathVariable Long id) {
+    userRepository.deleteById(null);
+  }
+
+  @PutMapping("/{id}")
+  public User updateProject(@PathVariable Long id, @RequestBody User user) {
+    User founduser = userRepository.findById(null).orElse(null);
+    if (founduser != null) {
+    	founduser.setName(user.getName());
+		founduser.setContent(user.getContent());
+      userRepository.save(founduser);
+      return founduser;
+    }
+    return null;
+  }
+
+}
