@@ -1,0 +1,7 @@
+<h3>List of posts</h3>
+<input [(ngModel)]="newPost.name" />
+<button (click)="addPost()">add</button>
+<ul>
+	<li *ngFor="let post of posts">{{ post.id }} : {{ post.name }} :
+		{{ post.complete ? "complete" : "not complete" }}</li>
+</ul>
