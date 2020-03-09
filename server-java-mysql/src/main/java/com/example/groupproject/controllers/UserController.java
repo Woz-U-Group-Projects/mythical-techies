@@ -45,7 +45,9 @@ public class UserController {
     User foundUser = userRepository.findById(id).orElse(null);
     if (foundUser != null) {
     	foundUser.setName(user.getName());
-    	foundUser.setComplete(user.getComplete());
+    	foundUser.setUsername(user.getUsername());
+    	foundUser.setEmail(user.getEmail());
+    	foundUser.setPasscode(user.getPasscode());
       userRepository.save(foundUser);
       return foundUser;
     }
