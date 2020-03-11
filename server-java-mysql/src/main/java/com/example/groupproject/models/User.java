@@ -14,10 +14,35 @@ public class User {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String name;
-  @Column(columnDefinition = "boolean default false")
-  private boolean complete;
+  private String username;
+  private String email;
+  private String passcode;
 
-  public Long getId() {
+  public String getUsername() {
+	return username;
+}
+
+public void setUsername(String username) {
+	this.username = username;
+}
+
+public String getEmail() {
+	return email;
+}
+
+public void setEmail(String email) {
+	this.email = email;
+}
+
+public String getPasscode() {
+	return passcode;
+}
+
+public void setPasscode(String passcode) {
+	this.passcode = passcode;
+}
+
+public Long getId() {
     return this.id;
   }
 
@@ -33,12 +58,5 @@ public class User {
     this.name = name;
   }
 
-  public boolean getComplete() {
-    return this.complete;
-  }
-
-  public void setComplete(boolean complete) {
-    this.complete = complete;
-  }
 
 }
