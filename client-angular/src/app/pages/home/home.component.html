@@ -1,0 +1,7 @@
+<h3>List ofhomes</h3>
+<input [(ngModel)]="newHome.name" />
+<button (click)="addHome()">add</button>
+<ul>
+	<ul *ngFor="lethome ofhomes">{{home.id }} : {{home.name }} :
+		{{home.complete ? "complete" : "not complete" }}</ul>
+</ul>
