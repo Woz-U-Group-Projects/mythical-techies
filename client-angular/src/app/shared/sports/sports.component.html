@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+  <div class="logopic">
+    <img src="https://cdn2.f-cdn.com/contestentries/1216494/10168094/5a47432119c47_thumb900.jpg">
+  </div>
+  <div class="wording">
+    <h1>Sports</h1>
+    <h3>Discussion Board</h3>
+  </div>
+  <form class="input">
+    <label for="uname"> Name:</label><br>
+    <input type="text" id="uname" name="uname">
+  </form>
+  
+   
+  <div class="posts">
+    <label for="posts"> Your Post:</label><br>
+    <textarea id="myTextarea"></textarea>
+  </div>
+
+  <button id="button" onclick="myFunction()">P O S T</button>
+  
+  
+    <h1>
+      Sports Post:
+    </h1>
+
+    <ul>
+      <li *ngFor="let sport of sports">
+        <h4>{{sport.id + 1}}. {{sport.name}}</h4>
+        <h2>{{sport.message}}</h2>
+      </li>
+    </ul>
+
+    
+
+    <script>
+      function myFunction() {
+    var uname = document.getElementById("uname").value;
+    var myTextarea = document.getElementById("myTextarea").value;
+
+
+    var fullPost = uname + " " + myTextarea;
+    document.getElementById("fullPost").innerHTML = fullPost;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+h1 {
+    color: rgb(211, 202, 202);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right: 3em;
+    padding-left: 3em;
+    font-size: 1.5em;
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+li{
+    border: 1px solid black;
+    box-shadow: 5px 10px 8px #e75009;
+    border-radius: 10px;
+    margin-right: 26em;
+    margin-left: 24em;
+    margin-bottom: 2em;
+    padding: 1em;
+    height: auto;
+    width: 300px;
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+    align-content: center;
+}
+.wording {
+    text-align: center;
+    color: whitesmoke;
+}
+.input {
+    color: whitesmoke;
+    text-align: center;
+}
+button {
+    background-color: #e75009; 
+    border-radius: 12px;
+    color: rgb(255, 245, 245);
+    padding: 14px 40px;
+    justify-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+    height: 50px; 
+    width:150px;  
+    position:relative;
+    left: 44%;
+}
+.posts {
+    text-align: center;
+    margin: 20px;
+    color:whitesmoke;
+}
+.logopic {
+    text-align: center;
+}
+script {
+    color: whitesmoke;
+}
+.demo {
+    background-color: #e75009; 
+    border-radius: 12px;
+    color: rgb(255, 245, 245);
+    padding: 14px 40px;
+    justify-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+    height: 50px; 
+    width:150px;  
+    position:relative;
+    left: 44%;
+}

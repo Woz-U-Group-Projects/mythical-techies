@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+  <div class="logopic">
+    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-valentines-day-music-index-1548455618.jpg?crop=1.00xw:1.00xh;0,0&resize=640:*">
+  </div>
+  <div class="wording">
+    <h1>Music</h1>
+    <h3>Discussion Board</h3>
+  </div>
+  <form class="input">
+    <label for="uname"> Name:</label><br>
+    <input type="text" id="uname" name="uname">
+  </form>
+  
+    
+  <div class="posts">
+    <label for="posts"> Your Post:</label><br>
+    <textarea id="post" name="post" placeholder="Type Here"  style="height:100em" style="width: 75em"></textarea>
+  </div>
+    <button class="submit">Post</button>
+  
+    <ul>
+      <li *ngFor="let music of musics">
+        <h4>{{music.id + 1}}. {{music.name}}</h4>
+        <h2>{{music.message}}</h2>
+      </li>
+    </ul>
+</body>
+</html>

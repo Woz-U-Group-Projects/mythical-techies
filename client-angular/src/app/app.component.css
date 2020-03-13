@@ -1,0 +1,110 @@
+h1 {
+    color: rgb(230, 222, 222);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4em;
+    border: solid;
+}
+
+#header {
+    text-align: center;
+    color: #d7e2ec;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.logopic {
+    text-align: center;
+}
+
+h5 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+p {
+    padding-right: 300px;
+    padding-left: 300px;
+}
+
+router-outlet {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin: 40px auto;
+    padding: 0.5%;
+
+    overflow: hidden;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
+    background-color: #e75009;
+    color: #d7e2ec;
+    font-size: 1.4em;
+    text-decoration: none;
+
+    transition: background-color 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #e2df07;
+}
+
+.btn > * {
+    position: relative;
+}
+
+.btn span {
+    display: block;
+    padding: 12px 24px;
+}
+
+.btn:before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+
+    border-radius: 100%;
+
+    background-color: rgba(236, 240, 241, 0.3);
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+
+    transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+}
+li {
+    margin-right: 5em;
+    margin-left: 5em;
+    background-color: rgb(123, 123, 231);
+    margin-bottom: 2em;
+    padding: 1em;
+    color: rgb(209, 204, 204);
+    font-size: 20px;
+}

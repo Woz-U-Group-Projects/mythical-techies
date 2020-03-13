@@ -1,0 +1,48 @@
+.wording {
+    text-align: center;
+    color: whitesmoke;
+}
+li{
+    border: 1px solid black;
+    box-shadow: 5px 10px 8px #e75009;
+    border-radius: 10px;
+    margin-right: 26em;
+    margin-left: 24em;
+    margin-bottom: 2em;
+    padding: 1em;
+    height: auto;
+    width: 300px;
+    background-color: rgb(235, 235, 235);
+    text-align: center;
+    align-content: center;
+}
+.input {
+    color: whitesmoke;
+    text-align: center;
+}
+.submit {
+    background-color: #e75009; /* Green */
+    border-radius: 12px;
+    color: white;
+    padding: 14px 40px;
+    justify-items: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+    height: 50px; 
+    width:150px;  
+    position:relative;
+    left: 40%;
+}
+.posts {
+    text-align: center;
+    margin: 20px;
+    color:whitesmoke;
+}
+.logopic {
+    text-align: center;
+}
